@@ -25,7 +25,7 @@ all_breeds = pd.DataFrame({'breed': ['affenpinscher', 'afghan_hound', 'african_h
 
 @st.cache(allow_output_mutation=True)  # 👈 Added this
 def get_model():
-    model = keras.models.load_model("data/trained_model", compile = False)
+    model = tf.keras.models.load_model("data/updated_model", compile = False)
     session = tf.compat.v1.keras.backend.get_session()
     return model
 
